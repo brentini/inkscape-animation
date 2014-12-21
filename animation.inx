@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Animation</_name>
+  <id>org.sacramento.animation</id>
+  <dependency type="executable" location="extensions">animation.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <!-- <param name="what" type="string" _gui-text="Attribute"></param> -->
+  <param name="frame" type="int" min="1" max="100" _gui-text="Current Frame">1</param>
+<!--  <param name="what" type="int" _gui-text="Total Frames" min="1" max="3600"></param> -->
+  <effect needs-live-preview="false">
+    <object-type>all</object-type>
+    <effects-menu>
+       <submenu _name="Animation"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">animation.py</command>
+  </script>
+</inkscape-extension>
