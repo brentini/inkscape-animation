@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Playback</_name>
+  <id>org.sacramento.animationpreview</id>
+  <dependency type="executable" location="extensions">animation_preview.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <!-- <param name="what" type="string" _gui-text="Attribute"></param> -->
+  <param name="framerate" type="int" min="1" max="100" _gui-text="Framerate">24</param>
+<!--  <param name="width" type="int" min="1" max="10000" _gui-text="Width">512</param> -->
+  <effect needs-live-preview="false">
+    <object-type>all</object-type>
+    <effects-menu>
+       <submenu _name="Animation"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">animation_preview.py</command>
+  </script>
+</inkscape-extension>
